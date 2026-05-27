@@ -238,7 +238,5 @@ test.describe('Trade Me API - Categories Endpoint', () => {
 
       expect(response.status()).toBeGreaterThanOrEqual(400);
     });
-
-
   });
 });

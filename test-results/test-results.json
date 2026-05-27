@@ -78,7 +78,7 @@
           "column": 6,
           "specs": [
             {
-              "title": "@smoke @search TC-03: Search for \"car park\" returns relevant listings",
+              "title": "@smoke @search TC-01: Search for \"car park\" returns relevant listings",
               "ok": true,
               "tags": [
                 "smoke",
@@ -96,12 +96,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 24269,
+                      "duration": 11820,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:20:52.742Z",
+                      "startTime": "2026-05-27T04:36:55.119Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -109,13 +109,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-7e17d8c1c5d59210c6d4",
+              "id": "a088064de9fe351eef5f-729828997d9a72e3f06e",
               "file": "search.spec.ts",
               "line": 15,
-              "column": 9
+              "column": 7
             },
             {
-              "title": "@regression @search TC-04: All \"car park\" search results contain relevant keywords",
+              "title": "@regression @search TC-02: First result on page 1 and page 2 are different",
               "ok": true,
               "tags": [
                 "regression",
@@ -133,12 +133,19 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 19501,
+                      "duration": 18211,
                       "errors": [],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "Page 1 First Result:  Northland  Listed: Fri, 29 Apr  House  Asking price $12  No Photo \n\n\n\n"
+                        },
+                        {
+                          "text": "Page 2 First Result:  Waikato  Listed: Mon, 24 Nov  House & Land Package  Asking price $595,000 \n\n\n\n\n\n\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:20:52.747Z",
+                      "startTime": "2026-05-27T04:36:55.113Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -146,16 +153,16 @@
                   "status": "expected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-09cd2ec4ad1b2b94cd4c",
+              "id": "a088064de9fe351eef5f-3ef8e8816eaa10599f66",
               "file": "search.spec.ts",
               "line": 39,
-              "column": 9
+              "column": 7
             },
             {
-              "title": "@smoke @search TC-05: \"car park\" search displays listings with correct information",
+              "title": "@regression @search TC-03: All \"car park\" search results contain relevant keywords",
               "ok": true,
               "tags": [
-                "smoke",
+                "regression",
                 "search"
               ],
               "tests": [
@@ -170,12 +177,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 27944,
+                      "duration": 25530,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:20:52.718Z",
+                      "startTime": "2026-05-27T04:36:55.178Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -183,13 +190,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-5ca20b27ced7bcdbcb55",
+              "id": "a088064de9fe351eef5f-2bc7d184848f6eb396b1",
               "file": "search.spec.ts",
-              "line": 61,
-              "column": 9
+              "line": 87,
+              "column": 7
             },
             {
-              "title": "@smoke @search TC-04: Search URL contains correct search parameters",
+              "title": "@smoke @search TC-04: \"car park\" search displays listings with correct information",
               "ok": true,
               "tags": [
                 "smoke",
@@ -207,7 +214,44 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 25935,
+                      "duration": 18389,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-27T04:36:55.157Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a088064de9fe351eef5f-00eb96875f8b7d7f5a8a",
+              "file": "search.spec.ts",
+              "line": 109,
+              "column": 7
+            },
+            {
+              "title": "@smoke @search TC-05: Search URL contains correct search parameters",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "search"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 24093,
                       "errors": [],
                       "stdout": [
                         {
@@ -216,7 +260,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:20:52.749Z",
+                      "startTime": "2026-05-27T04:37:07.710Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -224,13 +268,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-3c26a3b9fac5821a1e89",
+              "id": "a088064de9fe351eef5f-e4890b38079b838c8d1a",
               "file": "search.spec.ts",
-              "line": 81,
-              "column": 9
+              "line": 129,
+              "column": 7
             },
             {
-              "title": "@regression @search TC-05: Search with numeric values returns results",
+              "title": "@regression @search TC-06: Search with numeric values returns results",
               "ok": true,
               "tags": [
                 "regression",
@@ -248,12 +292,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 18496,
+                      "duration": 19544,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:21:13.019Z",
+                      "startTime": "2026-05-27T04:37:14.118Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -261,10 +305,10 @@
                   "status": "expected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-d8988b543637bfc7d02f",
+              "id": "a088064de9fe351eef5f-7af99db91009a9709f44",
               "file": "search.spec.ts",
-              "line": 95,
-              "column": 9
+              "line": 143,
+              "column": 7
             },
             {
               "title": "@regression @search TC-08: Search works from homepage",
@@ -282,15 +326,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 12468,
+                      "duration": 17726,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:21:19.002Z",
+                      "startTime": "2026-05-27T04:37:14.293Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -300,56 +344,19 @@
               ],
               "id": "a088064de9fe351eef5f-dc1ad79f9f9730faea77",
               "file": "search.spec.ts",
-              "line": 102,
-              "column": 9
+              "line": 150,
+              "column": 7
             }
           ]
         },
         {
           "title": "Search Functionality - Negative Scenarios",
           "file": "search.spec.ts",
-          "line": 114,
-          "column": 8,
+          "line": 162,
+          "column": 6,
           "specs": [
             {
-              "title": "@regression @search TC-09: Search with empty input shows appropriate behavior",
-              "ok": true,
-              "tags": [
-                "regression",
-                "search"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 13416,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-26T12:21:20.086Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a088064de9fe351eef5f-70dc0d5540c0ece4977c",
-              "file": "search.spec.ts",
-              "line": 124,
-              "column": 9
-            },
-            {
-              "title": "@regression @search TC-10: Search with special characters only returns no results gracefully",
+              "title": "@regression @search TC-07: Search with empty input shows appropriate behavior",
               "ok": true,
               "tags": [
                 "regression",
@@ -367,12 +374,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 15452,
+                      "duration": 15610,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:21:21.313Z",
+                      "startTime": "2026-05-27T04:37:22.214Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -380,13 +387,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-d2017eff4e764bb12444",
+              "id": "a088064de9fe351eef5f-1f67d90faa9d7a90861a",
               "file": "search.spec.ts",
-              "line": 134,
-              "column": 9
+              "line": 172,
+              "column": 7
             },
             {
-              "title": "@regression @search TC-11: Search with extremely long string handles gracefully",
+              "title": "@regression @search TC-08: Search with special characters only returns no results gracefully",
               "ok": true,
               "tags": [
                 "regression",
@@ -404,12 +411,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10714,
+                      "duration": 15291,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:21:31.576Z",
+                      "startTime": "2026-05-27T04:37:31.965Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -417,13 +424,50 @@
                   "status": "expected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-a6835824cec8fdd506d3",
+              "id": "a088064de9fe351eef5f-66a046553bf2daf3bd78",
               "file": "search.spec.ts",
-              "line": 145,
-              "column": 9
+              "line": 182,
+              "column": 7
             },
             {
-              "title": "@regression @search TC-12: Search with non-existent terms shows no results message",
+              "title": "@regression @search TC-09: Search with extremely long string handles gracefully",
+              "ok": true,
+              "tags": [
+                "regression",
+                "search"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 16169,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-27T04:37:32.109Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a088064de9fe351eef5f-c838d541d677ef7146fe",
+              "file": "search.spec.ts",
+              "line": 193,
+              "column": 7
+            },
+            {
+              "title": "@regression @search TC-10: Search with non-existent terms shows no results message",
               "ok": true,
               "tags": [
                 "regression",
@@ -441,12 +485,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 18807,
+                      "duration": 13054,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:21:31.623Z",
+                      "startTime": "2026-05-27T04:37:33.730Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -454,58 +498,21 @@
                   "status": "expected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-c68d894e1173e748de23",
+              "id": "a088064de9fe351eef5f-3a77f0627f0e89b18acc",
               "file": "search.spec.ts",
-              "line": 153,
-              "column": 9
+              "line": 201,
+              "column": 7
             }
           ]
         },
         {
           "title": "Search Functionality - Edge Cases",
           "file": "search.spec.ts",
-          "line": 164,
-          "column": 8,
+          "line": 210,
+          "column": 6,
           "specs": [
             {
-              "title": "@regression @search TC-16: Search with mixed case returns case-insensitive results",
-              "ok": true,
-              "tags": [
-                "regression",
-                "search"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 18639,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-26T12:21:33.717Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a088064de9fe351eef5f-43079902390fdf18d72a",
-              "file": "search.spec.ts",
-              "line": 175,
-              "column": 9
-            },
-            {
-              "title": "@regression @search TC-17: Search with accents works correctly",
+              "title": "@regression @search TC-11: Search with mixed case returns case-insensitive results",
               "ok": true,
               "tags": [
                 "regression",
@@ -523,12 +530,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 17505,
+                      "duration": 15783,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:21:36.925Z",
+                      "startTime": "2026-05-27T04:37:38.122Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -536,21 +543,58 @@
                   "status": "expected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-d8572810f96600c56b41",
+              "id": "a088064de9fe351eef5f-dd73e8dda20c0d989890",
               "file": "search.spec.ts",
-              "line": 182,
-              "column": 9
+              "line": 221,
+              "column": 7
+            },
+            {
+              "title": "@regression @search TC-12: Search with accents works correctly",
+              "ok": true,
+              "tags": [
+                "regression",
+                "search"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 17879,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-27T04:37:46.860Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a088064de9fe351eef5f-42ae25033cfe48ce103c",
+              "file": "search.spec.ts",
+              "line": 228,
+              "column": 7
             }
           ]
         },
         {
           "title": "Search Functionality - Non-Functional Tests",
           "file": "search.spec.ts",
-          "line": 192,
-          "column": 8,
+          "line": 236,
+          "column": 6,
           "specs": [
             {
-              "title": "@performance @search TC-20: Search results load within acceptable time",
+              "title": "@performance @search TC-13: Search results load within acceptable time",
               "ok": false,
               "tags": [
                 "performance",
@@ -568,62 +612,62 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 16899,
+                      "duration": 20421,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m3271\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m3271\u001b[39m\n    at C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts:211:22",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m4222\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m4222\u001b[39m\n    at C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts:255:22",
                         "location": {
                           "file": "C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts",
                           "column": 22,
-                          "line": 211
+                          "line": 255
                         },
-                        "snippet": "\u001b[0m \u001b[90m 209 |\u001b[39m\n \u001b[90m 210 |\u001b[39m     \u001b[36mconst\u001b[39m loadTime \u001b[33m=\u001b[39m endTime \u001b[33m-\u001b[39m startTime\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 211 |\u001b[39m     expect(loadTime)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 3 seconds threshold\u001b[39m\n \u001b[90m     |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 212 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 213 |\u001b[39m\n \u001b[90m 214 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Search Filters - House Search'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 253 |\u001b[39m\n \u001b[90m 254 |\u001b[39m     \u001b[36mconst\u001b[39m loadTime \u001b[33m=\u001b[39m endTime \u001b[33m-\u001b[39m startTime\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 255 |\u001b[39m     expect(loadTime)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 3 seconds threshold\u001b[39m\n \u001b[90m     |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 256 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 257 |\u001b[39m\n \u001b[90m 258 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Search Filters - House Search'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts",
                             "column": 22,
-                            "line": 211
+                            "line": 255
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m3271\u001b[39m\n\n\u001b[0m \u001b[90m 209 |\u001b[39m\n \u001b[90m 210 |\u001b[39m     \u001b[36mconst\u001b[39m loadTime \u001b[33m=\u001b[39m endTime \u001b[33m-\u001b[39m startTime\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 211 |\u001b[39m     expect(loadTime)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 3 seconds threshold\u001b[39m\n \u001b[90m     |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 212 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 213 |\u001b[39m\n \u001b[90m 214 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Search Filters - House Search'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts:211:22\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m4222\u001b[39m\n\n\u001b[0m \u001b[90m 253 |\u001b[39m\n \u001b[90m 254 |\u001b[39m     \u001b[36mconst\u001b[39m loadTime \u001b[33m=\u001b[39m endTime \u001b[33m-\u001b[39m startTime\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 255 |\u001b[39m     expect(loadTime)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 3 seconds threshold\u001b[39m\n \u001b[90m     |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 256 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 257 |\u001b[39m\n \u001b[90m 258 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Search Filters - House Search'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts:255:22\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:21:42.376Z",
+                      "startTime": "2026-05-27T04:37:47.341Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Users\\Amir\\Documents\\Playwright Framework\\test-results\\search-Search-Functionalit-79ee0-load-within-acceptable-time-chromium\\test-failed-1.png"
+                          "path": "C:\\Users\\Amir\\Documents\\Playwright Framework\\test-results\\search-Search-Functionalit-66314-load-within-acceptable-time-chromium\\test-failed-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "C:\\Users\\Amir\\Documents\\Playwright Framework\\test-results\\search-Search-Functionalit-79ee0-load-within-acceptable-time-chromium\\video.webm"
+                          "path": "C:\\Users\\Amir\\Documents\\Playwright Framework\\test-results\\search-Search-Functionalit-66314-load-within-acceptable-time-chromium\\video.webm"
                         },
                         {
                           "name": "error-context",
                           "contentType": "text/markdown",
-                          "path": "C:\\Users\\Amir\\Documents\\Playwright Framework\\test-results\\search-Search-Functionalit-79ee0-load-within-acceptable-time-chromium\\error-context.md"
+                          "path": "C:\\Users\\Amir\\Documents\\Playwright Framework\\test-results\\search-Search-Functionalit-66314-load-within-acceptable-time-chromium\\error-context.md"
                         }
                       ],
                       "errorLocation": {
                         "file": "C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts",
                         "column": 22,
-                        "line": 211
+                        "line": 255
                       }
                     }
                   ],
                   "status": "unexpected"
                 }
               ],
-              "id": "a088064de9fe351eef5f-3069ec44e6d14e2b3436",
+              "id": "a088064de9fe351eef5f-b8471e8ff4446faa053d",
               "file": "search.spec.ts",
-              "line": 202,
+              "line": 246,
               "column": 7
             }
           ],
@@ -631,48 +675,11 @@
             {
               "title": "Search Filters - House Search",
               "file": "search.spec.ts",
-              "line": 214,
+              "line": 258,
               "column": 8,
               "specs": [
                 {
-                  "title": "@regression @filters TC-20: Category dropdown filters results",
-                  "ok": true,
-                  "tags": [
-                    "regression",
-                    "filters"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 1,
-                          "status": "passed",
-                          "duration": 21055,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-05-26T12:21:50.579Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "a088064de9fe351eef5f-e62a16240dc17031ca32",
-                  "file": "search.spec.ts",
-                  "line": 216,
-                  "column": 9
-                },
-                {
-                  "title": "@regression @filters TC-21: Location dropdown filters results",
+                  "title": "@regression @filters TC-14: Category dropdown filters results",
                   "ok": true,
                   "tags": [
                     "regression",
@@ -690,12 +697,12 @@
                           "workerIndex": 3,
                           "parallelIndex": 3,
                           "status": "passed",
-                          "duration": 13102,
+                          "duration": 23238,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:21:52.442Z",
+                          "startTime": "2026-05-27T04:37:48.348Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -703,13 +710,50 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "a088064de9fe351eef5f-cd721c5acf3a3f2e380a",
+                  "id": "a088064de9fe351eef5f-de922a6a9876e81e0498",
                   "file": "search.spec.ts",
-                  "line": 242,
-                  "column": 11
+                  "line": 260,
+                  "column": 9
                 },
                 {
-                  "title": "@regression @search TC-30: Clicking X clears the search bar",
+                  "title": "@regression @filters TC-15: Location dropdown filters results",
+                  "ok": true,
+                  "tags": [
+                    "regression",
+                    "filters"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
+                          "status": "passed",
+                          "duration": 18756,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-27T04:37:54.052Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "a088064de9fe351eef5f-8f9f101790cac8f9e885",
+                  "file": "search.spec.ts",
+                  "line": 286,
+                  "column": 9
+                },
+                {
+                  "title": "@regression @search TC-16: Clicking X clears the search bar",
                   "ok": true,
                   "tags": [
                     "regression",
@@ -724,15 +768,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 2,
-                          "parallelIndex": 2,
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 11499,
+                          "duration": 12046,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:21:54.653Z",
+                          "startTime": "2026-05-27T04:38:04.914Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -740,13 +784,13 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "a088064de9fe351eef5f-c64d1ecf6262428b4454",
+                  "id": "a088064de9fe351eef5f-ce6775131d851768adf7",
                   "file": "search.spec.ts",
-                  "line": 266,
-                  "column": 11
+                  "line": 310,
+                  "column": 9
                 },
                 {
-                  "title": "@regression @filters TC-22: Condition dropdown filters results",
+                  "title": "@regression @filters TC-17: Condition dropdown filters results",
                   "ok": true,
                   "tags": [
                     "regression",
@@ -764,12 +808,12 @@
                           "workerIndex": 3,
                           "parallelIndex": 3,
                           "status": "passed",
-                          "duration": 12978,
+                          "duration": 25960,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:06.012Z",
+                          "startTime": "2026-05-27T04:38:11.721Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -777,13 +821,13 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "a088064de9fe351eef5f-3f037a32751e22cadfa0",
+                  "id": "a088064de9fe351eef5f-c6ec59d31d9d3bc13176",
                   "file": "search.spec.ts",
-                  "line": 284,
-                  "column": 7
+                  "line": 328,
+                  "column": 9
                 },
                 {
-                  "title": "@smoke @filters TC-23: Shipping dropdown displays results correctly",
+                  "title": "@smoke @filters TC-18: Shipping dropdown displays results correctly",
                   "ok": true,
                   "tags": [
                     "smoke",
@@ -801,12 +845,12 @@
                           "workerIndex": 2,
                           "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 23187,
+                          "duration": 9604,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:06.699Z",
+                          "startTime": "2026-05-27T04:38:13.207Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -814,90 +858,13 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "a088064de9fe351eef5f-7f26dcb7fa74faebc3a9",
+                  "id": "a088064de9fe351eef5f-b2b1d9dcd09a1f5332c4",
                   "file": "search.spec.ts",
-                  "line": 310,
-                  "column": 7
+                  "line": 362,
+                  "column": 9
                 },
                 {
-                  "title": "@regression @filters TC-24: Sort dropdown changes result ordering",
-                  "ok": false,
-                  "tags": [
-                    "regression",
-                    "filters"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 4,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 17484,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Sort order')\nExpected pattern: \u001b[32m/Sort: Latest listings/i\u001b[39m\nReceived string:  \u001b[31m\"7: ExpiryDesc\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Sort order')\u001b[22m\n\u001b[2m    12 × locator resolved to <select tgselect=\"\" id=\"tg-1007\" name=\"sortOrder\" _ngcontent-frend-c1304518118=\"\" class=\"ng-untouched ng-valid ng-dirty\">…</select>\u001b[22m\n\u001b[2m       - unexpected value \"7: ExpiryDesc\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Sort order')\nExpected pattern: \u001b[32m/Sort: Latest listings/i\u001b[39m\nReceived string:  \u001b[31m\"7: ExpiryDesc\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Sort order')\u001b[22m\n\u001b[2m    12 × locator resolved to <select tgselect=\"\" id=\"tg-1007\" name=\"sortOrder\" _ngcontent-frend-c1304518118=\"\" class=\"ng-untouched ng-valid ng-dirty\">…</select>\u001b[22m\n\u001b[2m       - unexpected value \"7: ExpiryDesc\"\u001b[22m\n\n    at C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts:355:3",
-                            "location": {
-                              "file": "C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts",
-                              "column": 3,
-                              "line": 355
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 353 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\n \u001b[90m 354 |\u001b[39m   page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Sort order'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 355 |\u001b[39m )\u001b[33m.\u001b[39mtoHaveValue(\u001b[35m/Sort: Latest listings/i\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 356 |\u001b[39m\n \u001b[90m 357 |\u001b[39m         \u001b[90m// Store first result after sorting\u001b[39m\n \u001b[90m 358 |\u001b[39m         \u001b[36mconst\u001b[39m firstResultAfter \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m searchResultsPage\u001b[33m.\u001b[39mgetFirstListingText()\u001b[33m;\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts",
-                                "column": 3,
-                                "line": 355
-                              },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Sort order')\nExpected pattern: \u001b[32m/Sort: Latest listings/i\u001b[39m\nReceived string:  \u001b[31m\"7: ExpiryDesc\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Sort order')\u001b[22m\n\u001b[2m    12 × locator resolved to <select tgselect=\"\" id=\"tg-1007\" name=\"sortOrder\" _ngcontent-frend-c1304518118=\"\" class=\"ng-untouched ng-valid ng-dirty\">…</select>\u001b[22m\n\u001b[2m       - unexpected value \"7: ExpiryDesc\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 353 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\n \u001b[90m 354 |\u001b[39m   page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Sort order'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 355 |\u001b[39m )\u001b[33m.\u001b[39mtoHaveValue(\u001b[35m/Sort: Latest listings/i\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 356 |\u001b[39m\n \u001b[90m 357 |\u001b[39m         \u001b[90m// Store first result after sorting\u001b[39m\n \u001b[90m 358 |\u001b[39m         \u001b[36mconst\u001b[39m firstResultAfter \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m searchResultsPage\u001b[33m.\u001b[39mgetFirstListingText()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts:355:3\u001b[22m"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-05-26T12:22:12.654Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\Users\\Amir\\Documents\\Playwright Framework\\test-results\\search-Search-Functionalit-510c0-own-changes-result-ordering-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "video",
-                              "contentType": "video/webm",
-                              "path": "C:\\Users\\Amir\\Documents\\Playwright Framework\\test-results\\search-Search-Functionalit-510c0-own-changes-result-ordering-chromium\\video.webm"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\Amir\\Documents\\Playwright Framework\\test-results\\search-Search-Functionalit-510c0-own-changes-result-ordering-chromium\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\Users\\Amir\\Documents\\Playwright Framework\\src\\tests\\search.spec.ts",
-                            "column": 3,
-                            "line": 355
-                          }
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "id": "a088064de9fe351eef5f-be2040d64d9b5a3ae98e",
-                  "file": "search.spec.ts",
-                  "line": 339,
-                  "column": 11
-                },
-                {
-                  "title": "@regression @filters TC-25: Multiple filters work together",
+                  "title": "@regression @filters TC-19: Sort dropdown changes result ordering",
                   "ok": true,
                   "tags": [
                     "regression",
@@ -915,12 +882,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 21753,
+                          "duration": 13955,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:11.702Z",
+                          "startTime": "2026-05-27T04:38:17.031Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -928,10 +895,47 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "a088064de9fe351eef5f-54980b203726196f96e6",
+                  "id": "a088064de9fe351eef5f-54e01b03a569b34b0279",
                   "file": "search.spec.ts",
-                  "line": 364,
-                  "column": 11
+                  "line": 391,
+                  "column": 9
+                },
+                {
+                  "title": "@regression @filters TC-20: Multiple filters work together",
+                  "ok": true,
+                  "tags": [
+                    "regression",
+                    "filters"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 17418,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-27T04:38:20.367Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "a088064de9fe351eef5f-8a59d7bcc1e6ae9f7bc5",
+                  "file": "search.spec.ts",
+                  "line": 421,
+                  "column": 9
                 }
               ]
             }
@@ -968,10 +972,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1612,
+                      "duration": 1650,
                       "errors": [],
                       "stdout": [
                         {
@@ -983,7 +987,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:22:19.864Z",
+                      "startTime": "2026-05-27T04:38:22.941Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1012,28 +1016,28 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 232,
+                      "duration": 321,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "Category Name: Trade Me Motors\n"
                         },
                         {
-                          "text": "Total listings count: \u001b[33m2766927\u001b[39m\n"
+                          "text": "Total listings count: \u001b[33m2843647\u001b[39m\n"
                         },
                         {
                           "text": "Number of subcategories: \u001b[33m13\u001b[39m\n"
                         },
                         {
-                          "text": "First subcategory: Cars - Count: \u001b[33m68096\u001b[39m\n"
+                          "text": "First subcategory: Cars - Count: \u001b[33m68490\u001b[39m\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-26T12:22:22.263Z",
+                      "startTime": "2026-05-27T04:38:26.069Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1067,15 +1071,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 422,
+                          "duration": 829,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:24.049Z",
+                          "startTime": "2026-05-27T04:38:27.336Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1101,15 +1105,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 1067,
+                          "duration": 346,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:24.551Z",
+                          "startTime": "2026-05-27T04:38:28.809Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1135,15 +1139,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 773,
+                          "duration": 294,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:25.970Z",
+                          "startTime": "2026-05-27T04:38:29.550Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1169,15 +1173,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 492,
+                          "duration": 385,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:28.029Z",
+                          "startTime": "2026-05-27T04:38:29.948Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1203,15 +1207,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 336,
+                          "duration": 309,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:28.632Z",
+                          "startTime": "2026-05-27T04:38:30.537Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1237,15 +1241,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 717,
+                          "duration": 616,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:29.043Z",
+                          "startTime": "2026-05-27T04:38:30.906Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1271,15 +1275,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 78,
+                          "duration": 762,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:30.075Z",
+                          "startTime": "2026-05-27T04:38:31.087Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1308,12 +1312,12 @@
                           "workerIndex": 2,
                           "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 865,
+                          "duration": 149,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:30.215Z",
+                          "startTime": "2026-05-27T04:38:31.793Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1339,15 +1343,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 269,
+                          "duration": 1006,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:30.776Z",
+                          "startTime": "2026-05-27T04:38:32.907Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1373,15 +1377,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 464,
+                          "duration": 597,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:31.095Z",
+                          "startTime": "2026-05-27T04:38:33.420Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1407,15 +1411,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 2,
-                          "parallelIndex": 2,
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 410,
+                          "duration": 429,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:31.524Z",
+                          "startTime": "2026-05-27T04:38:33.987Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1441,15 +1445,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
-                          "parallelIndex": 3,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 137,
+                          "duration": 116,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-26T12:22:31.617Z",
+                          "startTime": "2026-05-27T04:38:34.118Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1471,11 +1475,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-26T12:20:51.788Z",
-    "duration": 102240.341,
-    "expected": 32,
+    "startTime": "2026-05-27T04:36:54.105Z",
+    "duration": 105384.481,
+    "expected": 34,
     "skipped": 0,
-    "unexpected": 2,
+    "unexpected": 1,
     "flaky": 0
   }
 }
