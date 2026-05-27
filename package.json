@@ -1,0 +1,31 @@
+{
+  "name": "trademe-automation-framework",
+  "version": "1.0.0",
+  "description": "Test Automation Framework for TradeMe Sandbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --grep @ui",
+    "test:api": "playwright test --grep @api",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:list": "playwright test --list",
+    "report": "playwright show-report playwright-report",
+    "report:open": "playwright show-report playwright-report",
+    "verify": "node verify-setup.js"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.4.5"
+  }
+}
