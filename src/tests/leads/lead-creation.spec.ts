@@ -25,8 +25,6 @@ test.describe('Part B - Lead Creation & Management', () => {
     await leadDetailPage.assertStatus('Open - Not Contacted');
     await leadDetailPage.changeStatusViaPath('Working - Contacted');
     await leadDetailPage.assertStatus('Working - Contacted');
-
-    //await leadDetailPage.assertFieldValue('Lead Source', lead.leadSource);
   });
 
   // test('edits Lead status from Unqualified to Qualified', async ({ page, leadPage, leadDetailPage }) => {

@@ -50,4 +50,16 @@ export class LeadDetailPage {
     await this.page.getByRole('button', { name: 'Show more actions' }).click();
     await this.page.getByRole('menuitem', { name: 'Convert' }).click();
   }
+
+  async searchAndOpenLead(leadName: string) {
+  const searchInput = this.page.getByPlaceholder('Search...');
+  await searchInput.click();
+  await searchInput.fill(leadName);
+  await this.page.keyboard.press('Enter');
+
+  const leadResult = this.page.getByRole('link', { name: leadName, exact: true }).first();
+  await leadResult.waitFor({ state: 'visible', timeout: 15000 });
+  await leadResult.click();
+}
+
 }

@@ -71,9 +71,6 @@ export class LeadPage {
     await this.save();
     const toast = this.page.locator('span.toastMessage', { hasText: 'was created' });
     await expect(toast).toBeVisible();
-    // await expect(this.page.locator('records-highlights2')).toBeVisible({
-    //   timeout: 100000,
-    // });
   }
 
   async saveAndExpectValidationError() {

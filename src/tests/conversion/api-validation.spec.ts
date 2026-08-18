@@ -29,7 +29,6 @@ test.describe('Part B (Bonus) - API/Response Validation', () => {
       }
     });
 
-
     await leadDetailPage.clickConvert();
     await convertLeadModal.waitForModalLoad();
     await convertLeadModal.convertLeadFromModal();
@@ -52,8 +51,6 @@ test.describe('Part B (Bonus) - API/Response Validation', () => {
 
     expect(idMatch, 'No captured Aura response contained a valid Account/Opportunity Id').not.toBeNull();
     expect(matchedPayload).not.toBeNull();
-
-    // Deep property #2: no server-side error state was returned alongside 200 OK.
     expect(matchedPayload!.includes('"exceptionEvent"')).toBe(false);
   });
 });

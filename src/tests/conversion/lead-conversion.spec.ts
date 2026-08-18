@@ -20,8 +20,8 @@ test.describe('Part B - Lead to Opportunity Conversion', () => {
     await leadPage.saveAndExpectSuccess();
     await leadDetailPage.getRecordIdFromUrl();
     await leadDetailPage.clickConvert();
-    const result = await convertLeadModal.resolveAndSubmit(lead);
-     const summary = await convertLeadModal.assertConversionSummary(lead, 'Test Company');
+    await convertLeadModal.resolveAndSubmit(lead);
+    await convertLeadModal.assertConversionSummary(lead, lead.company);
 
     await convertLeadModal.navigateToOpportunityFromConfirmation();
     await opportunityPage.waitForLoad();
@@ -30,10 +30,10 @@ test.describe('Part B - Lead to Opportunity Conversion', () => {
     const opportunityId = opportunityPage.getRecordIdFromUrl();
     expect(opportunityId).toMatch(/^006[a-zA-Z0-9]{15}$/);
 
+    //asserts opportunity fields
     await opportunityPage.assertField('Stage', 'Prospecting');
     await opportunityPage.assertField('Opportunity Owner', 'Amir Yousef');
     await opportunityPage.assertField('Account Name', lead.company);
     await opportunityPage.assertField('Opportunity Name', lead.company);
-    await page.waitForTimeout(20000);
   });
 });

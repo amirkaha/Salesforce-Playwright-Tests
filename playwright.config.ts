@@ -4,6 +4,7 @@ import { config } from './src/utils/env';
 export default defineConfig({
   testDir: 'src/tests',
   globalSetup: require.resolve('./global-setup'),
+  globalTeardown: require.resolve('./global-teardown'),
   timeout: 250_000,
   expect: { timeout: 150_000 },
 

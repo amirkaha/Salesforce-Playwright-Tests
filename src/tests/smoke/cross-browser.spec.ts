@@ -4,8 +4,7 @@ import { generateLead } from '../../utils/testData';
 test.describe('Smoke - cross-browser', () => {
   test('login + create Lead succeeds', async ({ page, appLauncherPage, leadPage, leadDetailPage }) => {
     await page.goto('/lightning/page/home');
-    await appLauncherPage.openApp('Sales');
-    await page.getByRole('link', { name: 'Leads' }).click();
+    await appLauncherPage.waffleButtonLoaded();
 
     const lead = generateLead();
     await leadPage.openNewLeadForm();

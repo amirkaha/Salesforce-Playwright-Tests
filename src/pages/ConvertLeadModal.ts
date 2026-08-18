@@ -33,10 +33,10 @@ export class ConvertLeadModal {
   }
 
   async waitForModalLoad() {
-     await expect(this.createNewContact).toBeVisible({ timeout: 80000 });
+    await expect(this.createNewContact).toBeVisible({ timeout: 80000 });
   }
 
-   async convertLeadFromModal() {
+  async convertLeadFromModal() {
     await expect(this.convertLead).toBeVisible({ timeout: 80000 });
     await this.convertLead.click();
   }
@@ -91,9 +91,12 @@ export class ConvertLeadModal {
     const contactSearchTerm = `${lead.firstName} ${lead.lastName}`.slice(0, Math.ceil(`${lead.firstName} ${lead.lastName}`.length / 2));
     const contactLocator = `${lead.firstName} ${lead.lastName}${lead.company}`;
 
+    //To test existing account branch, replace lead.company with 'Rossi Systems 5518'
     const accountBranch = await this.searchAndSelectIfMatch(this.accountSearchInput, accountSearchTerm, lead.company);
 
+    // To test existing contact branch, replace the contactLocator with 'Mia Farrell5518 Rossi Systems 5518'
     const contactBranch = await this.searchAndSelectIfMatchContact(this.contactSearchInput, contactSearchTerm, contactLocator);
+
 
     await this.convertButton.click();
     return { accountBranch, contactBranch };
@@ -119,7 +122,8 @@ export class ConvertLeadModal {
     const accountCard = getCard('Account');
     const contactCard = getCard('Contact');
     const opportunityCard = getCard('Opportunity');
-
+    
+    //asserts account card info
     await expect(accountCard).toBeVisible({ timeout: 100000 });
     await expect(contactCard).toBeVisible({ timeout: 100000 });
     await expect(opportunityCard).toBeVisible({ timeout: 100000 });
@@ -129,7 +133,8 @@ export class ConvertLeadModal {
 
     const contactName = await getPrimaryName(contactCard);
     expect(contactName).toBe(`${lead.firstName} ${lead.lastName}`);
-
+    
+    //asserts contact card info
     const contactCardText = await contactCard.innerText();
     expect(contactCardText).toContain(lead.title);
     expect(contactCardText).toContain(lead.company);
