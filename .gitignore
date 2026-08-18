@@ -1,6 +1,13 @@
 node_modules/
 dist/
+.env
+storage/storageState.json
+storage/*.json
+!storage/.gitkeep
 playwright-report/
+test-results/
+blob-report/
 .playwright/
 .vscode/
 *.log
+.DS_Store
