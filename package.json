@@ -1,31 +1,31 @@
 {
-  "name": "trademe-automation-framework",
+  "name": "sf-qa-automation",
   "version": "1.0.0",
-  "description": "Test Automation Framework for TradeMe Sandbox",
-  "main": "index.js",
+  "description": "Playwright + TypeScript UI automation framework for Salesforce CRM (GovTech QA Assessment)",
   "scripts": {
     "test": "playwright test",
-    "test:ui": "playwright test --grep @ui",
-    "test:api": "playwright test --grep @api",
-    "test:smoke": "playwright test --grep @smoke",
-    "test:regression": "playwright test --grep @regression",
+    "test:chromium": "playwright test --project=chromium",
+    "test:webkit": "playwright test --project=webkit",
+    "test:smoke": "playwright test --project=chromium --project=webkit tests/smoke",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
-    "test:list": "playwright test --list",
+    "test:auth": "playwright test tests/auth",
+    "test:leads": "playwright test tests/leads",
+    "test:conversion": "playwright test tests/conversion",
     "report": "playwright show-report playwright-report",
-    "report:open": "playwright show-report playwright-report",
-    "verify": "node verify-setup.js"
+    "codegen": "playwright codegen https://login.salesforce.com",
+    "prepare-session": "ts-node global-setup.ts"
   },
-  "keywords": [
-    "playwright",
-    "automation",
-    "testing"
-  ],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.45.0",
+    "@playwright/test": "^1.47.0",
+    "@types/mailparser": "^3.4.6",
     "@types/node": "^20.14.0",
-    "typescript": "^5.4.5"
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "imapflow": "^1.7.1",
+    "mailparser": "^3.9.15"
   }
 }

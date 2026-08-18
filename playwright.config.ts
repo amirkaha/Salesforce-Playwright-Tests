@@ -1,30 +1,43 @@
-// Provide a minimal declaration for `process` to satisfy TypeScript
-declare const process: any;
-
 import { defineConfig, devices } from '@playwright/test';
+import { config } from './src/utils/env';
 
 export default defineConfig({
-  testDir: './src/tests',
+  testDir: 'src/tests',
+  globalSetup: require.resolve('./global-setup'),
+  timeout: 250_000,
+  expect: { timeout: 150_000 },
+
+  // Parallel execution across files/workers. Test data is generated
+  // per-test (see src/utils/testData.ts) so parallel Leads never collide.
   fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 2 : undefined,
+  retries: process.env.CI ? 1 : 0,
+
   reporter: [
-    ['html', { outputFolder: 'test-results/html-report' }],
-    ['json', { outputFile: 'test-results/test-results.json' }],
-    ['list']
+    ['list'],
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['json', { outputFile: 'test-results/results.json' }],
+    ['junit', { outputFile: 'test-results/junit.xml' }],
   ],
-   use: {
+
+  use: {
+    baseURL: config.baseUrl,
+    storageState: config.storageStatePath,
     headless: false,
-    baseURL: 'https://www.tmsandbox.co.nz',
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    actionTimeout: 10000,
-    navigationTimeout: 30000,
+    actionTimeout: 50_000,
   },
-  projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } }
-  ]
-});
 
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
+  ],
+});
