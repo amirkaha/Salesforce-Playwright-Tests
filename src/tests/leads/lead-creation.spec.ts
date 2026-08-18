@@ -7,8 +7,7 @@ test.describe('Part B - Lead Creation & Management', () => {
     await appLauncherPage.waffleButtonLoaded();
   });
 
-  test('creates a Lead with unique 18-digit Id and correct detail values', async ({
-    page,
+  test('creates a Lead with unique 18-digit Id and correct detail values, changes and asserts status', async ({
     leadPage,
     leadDetailPage,
   }) => {
@@ -26,17 +25,4 @@ test.describe('Part B - Lead Creation & Management', () => {
     await leadDetailPage.changeStatusViaPath('Working - Contacted');
     await leadDetailPage.assertStatus('Working - Contacted');
   });
-
-  // test('edits Lead status from Unqualified to Qualified', async ({ page, leadPage, leadDetailPage }) => {
-  //   const lead = generateLead();
-
-  //   await page.getByRole('link', { name: 'Leads' }).click();
-  //   await leadPage.openNewLeadForm();
-  //   await leadPage.fillLead(lead);
-  //   await leadPage.saveAndExpectSuccess();
-
-  //   await leadDetailPage.assertStatus('Unqualified');
-  //   await leadDetailPage.changeStatusViaPath('Qualified');
-  //   await leadDetailPage.assertStatus('Qualified');
-  // });
 });
