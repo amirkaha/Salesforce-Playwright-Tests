@@ -52,9 +52,15 @@ async function isSessionStillValid(statePath: string): Promise<boolean> {
     const context = await browser.newContext({ storageState: statePath });
     const page = await context.newPage();
     await page.goto(`${config.baseUrl}/lightning/page/home`, { waitUntil: 'domcontentloaded' });
-    const stillOnLoginPage = page.url().includes('/login');
+
+    // Check for actual login page content, not just a URL substring — this
+    // org's expired-session redirect doesn't always contain "/login" in
+    // the URL path (e.g. redirects through /?ec=302&startURL=...).
+    const usernameField = page.getByLabel('Username');
+    const isOnLoginPage = await usernameField.isVisible({ timeout: 3000 }).catch(() => false);
+
     await browser.close();
-    return !stillOnLoginPage;
+    return !isOnLoginPage;
   } catch {
     return false;
   }

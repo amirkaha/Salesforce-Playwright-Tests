@@ -44,7 +44,6 @@ export class ConvertLeadModal {
   private async searchAndSelectIfMatch(searchInput: Locator, searchTerm: string, locatorValue: string): Promise<ConversionBranch> {
     await this.waitForModalLoad();
     await searchInput.fill(searchTerm);
-    await this.page.waitForTimeout(8000);
     await searchInput.press('Backspace');
 
     const matchResult = this.page.getByRole('option', { name: locatorValue, exact: true });
@@ -94,7 +93,7 @@ export class ConvertLeadModal {
     //To test existing account branch, replace lead.company with 'Rossi Systems 5518'
     const accountBranch = await this.searchAndSelectIfMatch(this.accountSearchInput, accountSearchTerm, lead.company);
 
-    // To test existing contact branch, replace the contactLocator with 'Mia Farrell5518 Rossi Systems 5518'
+    // To test existing contact branch, replace the contactLocator with 'Mia Farrell5518Rossi Systems 5518'
     const contactBranch = await this.searchAndSelectIfMatchContact(this.contactSearchInput, contactSearchTerm, contactLocator);
 
 

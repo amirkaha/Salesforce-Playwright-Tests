@@ -15,11 +15,6 @@ type Pages = {
   opportunityPage: OpportunityPage;
 };
 
-/**
- * Extends Playwright's base test with ready-to-use Page Objects so spec
- * files stay declarative (no `new LoginPage(page)` boilerplate repeated
- * across every test).
- */
 export const test = base.extend<Pages>({
   loginPage: async ({ page }, use) => use(new LoginPage(page)),
   appLauncherPage: async ({ page }, use) => use(new AppLauncherPage(page)),
